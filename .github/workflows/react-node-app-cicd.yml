@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  AWS_REGION: 'us-east-1'
+  AWS_REGION: 'eu-west-2'
   ECS_TASK_DEFINITION: ./backend/react-nodejs-app-task-definition.json 
   ECS_CONTAINER_NAME: react-nodejs-app-container
   ECS_SERVICE: react-nodejs-app-service 
@@ -93,4 +93,4 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy to AWS S3
-        run: aws s3 sync ./frontend/dist s3://react-deployment-cicd-automated --delete
+        run: aws s3 sync ./frontend/dist s3://react-demo-automated-deployment --delete
