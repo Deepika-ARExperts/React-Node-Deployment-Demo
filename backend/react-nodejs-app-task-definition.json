@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-west-2:841979604010:task-definition/react-nodejs-app-task-definition:9",
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-2:841979604010:task-definition/react-nodejs-app-task-definition:11",
     "containerDefinitions": [
         {
             "name": "react-nodejs-app-container",
-            "image": "841979604010.dkr.ecr.eu-west-2.amazonaws.com/cicd-deployed-images-demo:c55cb3fc07ccdc0ee0420b6b979593618e922fe5",
+            "image": "841979604010.dkr.ecr.eu-west-2.amazonaws.com/cicd-deployed-images-demo:25c806dbd30eddb201b91095d9ad9123bf04bed8",
             "cpu": 0,
             "portMappings": [
                 {
@@ -65,7 +65,7 @@
     "taskRoleArn": "arn:aws:iam::841979604010:role/service-role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::841979604010:role/service-role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 9,
+    "revision": 11,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -115,7 +115,7 @@
     ],
     "cpu": "512",
     "memory": "1024",
-    "registeredAt": "2026-06-01T16:05:10.953Z",
+    "registeredAt": "2026-06-01T16:15:38.968Z",
     "registeredBy": "arn:aws:iam::841979604010:user/DevOps",
     "enableFaultInjection": false,
     "tags": []
