@@ -7,10 +7,10 @@ on:
 
 env:
   AWS_REGION: 'eu-west-2'
-  ECS_TASK_DEFINITION: react-nodejs-app-task-definition.json 
+  ECS_TASK_DEFINITION: ./backend/react-nodejs-app-task-definition.json 
   ECS_CONTAINER_NAME: react-nodejs-app-container
   ECS_SERVICE: react-nodejs-app-service 
-  ECS_CLUSTER: demo-react-node-app-cluster 
+  ECS_CLUSTER: react-node-app-demo-cluster 
   NODE_VERSION: '20.19.0' 
 
 
@@ -38,13 +38,13 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: cicd-deployed-images
+          ECR_REPOSITORY: cicd-deployed-images-demo
           IMAGE_TAG: ${{ github.sha }}
         run: |
           # Build a docker container and
           # push it to ECR so that it can
           # be deployed to ECS.
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ./backend
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
@@ -78,6 +78,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Dependency Installation
+        working-directory: ./frontend
         run: npm install
 
       - name: App Build
@@ -92,4 +93,4 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Deploy to AWS S3
-        run: aws s3 sync dist s3://react-deployment-cicd-automated --delete
+        run: aws s3 sync ./frontend/dist s3://react-deployment-cicd-automated --delete
