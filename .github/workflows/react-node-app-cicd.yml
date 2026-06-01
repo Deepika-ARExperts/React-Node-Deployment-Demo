@@ -9,7 +9,7 @@ env:
   AWS_REGION: 'eu-west-2'
   ECS_TASK_DEFINITION: ./backend/react-nodejs-app-task-definition.json 
   ECS_CONTAINER_NAME: react-nodejs-app-container
-  ECS_SERVICE: react-nodejs-app-service 
+  ECS_SERVICE: react-nodejs-app-service
   ECS_CLUSTER: react-node-app-demo-cluster 
   NODE_VERSION: '20.19.0' 
 
