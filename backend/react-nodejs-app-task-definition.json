@@ -46,7 +46,7 @@
             "secrets": [
                 {
                     "name": "DB_PASSWORD",
-                    "valueFrom": "arn:aws:secretsmanager:eu-west-2:841979604010:secret:demo-postgres-access-secret-4bV9BZ::DB_PASSWORD::"
+                    "valueFrom": "arn:aws:secretsmanager:eu-west-2:841979604010:secret:demo-postgres-access-secret-4bV9BZ"
                 }
             ],
             "logConfiguration": {
