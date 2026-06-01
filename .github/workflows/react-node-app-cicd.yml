@@ -11,7 +11,7 @@ env:
   ECS_CONTAINER_NAME: react-nodejs-app-container
   ECS_SERVICE: react-nodejs-app-service 
   ECS_CLUSTER: demo-react-node-app-cluster 
-  NODE_VERSION: '20.19.0'
+  NODE_VERSION: '20.19.0' 
 
 
 jobs:
