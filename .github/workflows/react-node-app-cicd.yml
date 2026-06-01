@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  AWS_REGION: 'eu-west-2'
+  AWS_REGION: 'us-east-1'
   ECS_TASK_DEFINITION: ./backend/react-nodejs-app-task-definition.json 
   ECS_CONTAINER_NAME: react-nodejs-app-container
   ECS_SERVICE: react-nodejs-app-service 
