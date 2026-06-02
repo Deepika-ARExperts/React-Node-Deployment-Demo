@@ -31,7 +31,7 @@ async function testConnection() {
 }
 
 
-app.get('/health', (req, res) => {
+app.get('/health', async (req, res) => {
   try {
     const pool = await connectToDatabase();
     await pool.query("SELECT 1");
