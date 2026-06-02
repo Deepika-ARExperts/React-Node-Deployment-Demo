@@ -7,11 +7,6 @@ const port = process.env.PORT;
 
 const cors = require('cors');
 
-app.use(cors({
-  origin: "https://dy5gffnrv8q7y.cloudfront.net", // for demo only
-  methods: ["GET", "POST", "PUT", "DELETE"]
-}));
-
 const { connectToDatabase } = require('./database');
 
 (async () => {

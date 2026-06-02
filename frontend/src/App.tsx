@@ -23,8 +23,7 @@ export default function TaskManager() {
     if (editingId !== null) editInputRef.current?.focus();
   }, [editingId]);
 
-  const API_BASE = 
-  "https://dy5gffnrv8q7y.cloudfront.net";
+  const API_BASE = "https://dy5gffnrv8q7y.cloudfront.net";
 
   useEffect(() => {
   fetch(`${API_BASE}/tasks`)
