@@ -74,43 +74,7 @@ app.listen(port, () => {
     DB_HOST: process.env.DB_HOST,
     DB_PORT: process.env.DB_PORT,
     DB_NAME: process.env.DB_NAME,
-    DB_USER: process.env.DB_USER
   });
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // CloudFront secret header middleware
-// app.use((req, res, next) => {
-//   // Bypass check for ALB health checks
-//   if (req.path === '/health') return next();
-
-//   const secret = req.headers['x-cloudfront-secret'];
-//   if (!secret || secret !== process.env.CLOUDFRONT_SECRET) {
-//     return res.status(403).json({ error: 'Forbidden' });
-//   }
-//   next();
-// });
