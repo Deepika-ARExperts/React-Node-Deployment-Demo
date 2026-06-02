@@ -24,7 +24,7 @@ export default function TaskManager() {
   }, [editingId]);
 
   useEffect(() => {
-  fetch("https://d1isxs8hczjncc.cloudfront.net/tasks")
+  fetch("http://react-node-app-alb-626066449.eu-west-2.elb.amazonaws.com/tasks")
     .then((res) => res.json())
     .then((data: Task[]) => {
       setTasks(data);

@@ -6,7 +6,11 @@ const port = process.env.PORT;
 // const port = 5001
 
 const cors = require('cors');
-app.use(cors());
+
+app.use(cors({
+  origin: "*", // for demo only
+  methods: ["GET", "POST", "PUT", "DELETE"]
+}));
 
 const { connectToDatabase } = require('./database');
 
