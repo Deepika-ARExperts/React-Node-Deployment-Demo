@@ -35,18 +35,14 @@
                 {
                     "name": "DB_PORT",
                     "value": "5432"
-                },
-                {
-                    "name": "DB_USER",
-                    "value": "postgres"
                 }
             ],
             "mountPoints": [],
             "volumesFrom": [],
             "secrets": [
                 {
-                    "name": "DB_PASSWORD",
-                    "valueFrom": "arn:aws:secretsmanager:eu-west-2:841979604010:secret:demo-postgres-access-secret-4bV9BZ"
+                    "name": "DB_SECRET",
+                    "valueFrom": "arn:aws:secretsmanager:eu-west-2:841979604010:secret:rds!cluster-93af06a2-fffd-4fe8-9928-9c23f8c3caef-qcJz0Z"
                 }
             ],
             "logConfiguration": {
