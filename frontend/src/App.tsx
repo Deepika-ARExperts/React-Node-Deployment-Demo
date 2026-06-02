@@ -24,7 +24,7 @@ export default function TaskManager() {
   }, [editingId]);
 
   const API_BASE = 
-  "http://react-node-app-alb-626066449.eu-west-2.elb.amazonaws.com";
+  "https://dy5gffnrv8q7y.cloudfront.net";
 
   useEffect(() => {
   fetch(`${API_BASE}/tasks`)
