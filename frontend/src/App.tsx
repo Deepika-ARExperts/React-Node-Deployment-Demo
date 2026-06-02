@@ -23,8 +23,11 @@ export default function TaskManager() {
     if (editingId !== null) editInputRef.current?.focus();
   }, [editingId]);
 
+  const API_BASE =
+  "https://react-node-app-alb-626066449.eu-west-2.elb.amazonaws.com";
+
   useEffect(() => {
-  fetch("http://react-node-app-alb-626066449.eu-west-2.elb.amazonaws.com/tasks")
+  fetch(`${API_BASE}/tasks`)
     .then((res) => res.json())
     .then((data: Task[]) => {
       setTasks(data);

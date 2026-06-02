@@ -8,7 +8,7 @@ const port = process.env.PORT;
 const cors = require('cors');
 
 app.use(cors({
-  origin: "*", // for demo only
+  origin: "https://dy5gffnrv8q7y.cloudfront.net", // for demo only
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
