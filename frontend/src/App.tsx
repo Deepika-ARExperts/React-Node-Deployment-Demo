@@ -96,7 +96,7 @@ export default function TaskManager() {
         <input
           className="task-input"
           type="text"
-          placeholder="What needs to be done?"
+          placeholder="What needs to be done?" 
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && addTask()}
